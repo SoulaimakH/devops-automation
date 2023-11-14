@@ -17,14 +17,7 @@ pipeline {
                 }
             }
         }
-        stage('Push image to Hub'){
-            steps{
-                script{
-                   sh 'docker push javatechie/devops-integration'
-                }
-}
-                   
-                }
+    
             }
         }
         stage('Deploy to k8s'){
