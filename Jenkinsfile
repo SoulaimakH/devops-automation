@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy to k8s'){
             steps{
                 script{
-                    kubernetesDeploy (configs: 'deploymentservice.yaml')
+                    kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'bootstrap-token-fj23kd')
                 }
             }
         }
